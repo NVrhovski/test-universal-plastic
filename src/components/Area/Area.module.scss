@@ -1,0 +1,84 @@
+@import '../../styles/variables.scss';
+
+.mainContainer
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .areaHeader
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span
+        {
+            color: $text-gray;
+            font-size: 11px;
+        }
+    }
+    .inputContainer
+    {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 20px;
+        overflow: hidden;
+        div
+        {
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: $dark-blue;
+            &:last-child
+            {
+                background-color: $light-blue;
+                z-index: 1;
+            }
+        }
+        input 
+        {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            margin: 0;
+            width: 100%;
+            &::-webkit-slider-runnable-track
+            {
+                background: $light-blue;
+                height: 2px;
+            }
+            &::-webkit-slider-thumb
+            {
+                -webkit-appearance: none;
+                appearance: none;
+                margin-top: -7px;
+                background-color: $extra-light-blue;
+                width: 16px; 
+                height: 16px; 
+                border-radius: 50%;
+                border: 2px solid $dark-blue;
+            }
+        }
+        .rangeShadow
+        {
+            position: absolute;
+            top: 9px;
+            left: -18px;
+            width: 100%;
+            height: 2px;
+            background-color: $dark-blue;
+            border-radius: 0;
+        }
+    }
+    .mapContainer
+    {
+        width: 100%;
+        height: auto;
+        margin: 20px 0 0 0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+}
