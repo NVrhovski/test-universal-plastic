@@ -33,7 +33,7 @@ const WeatherCity = () => {
         const selectedLocation = locations.find((el) => el.id == parseInt(value))
         getWeather(selectedLocation?.location.coordinates[1] || 0, selectedLocation?.location.coordinates[0] || 0)
     }
-    console.log(selectedWeather)
+ 
     return(
         <>
         <div className={styles.mainContainer}>
